@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+.table {
+	position: absolute;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.list {
+	position: relative;
+	width: 100%;
+	height: 100%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .list > div {
+	position: absolute;
+	will-change: transform, width, height, opacity;
+	padding:15px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .list > div > div {
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height: 10px;
+	border-radius: 4px;
+	box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.2);
   }
-}
+
+
+  .containerRef {
+	background-color:#171717;
+	height: 100%;
+	width: 100%;
+  }
+  
+  .full__page {
+	width: 100vw;
+	height: 100vh;
+  }
+  .animated__layers {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 0;
+  }
+
+  .animated__layers > * {
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	inset: 0;
+  }
+  
+  .dot {
+	background-image:  url('https://www.silvana.com/app/uploads/movement-gears-background.jpg');
+	top: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  
+  .title {
+	color: rgb(5, 74, 238);
+	font-size: 8vw;
+	margin-top: 0;
+	height: 100%;
+	margin-bottom: 0;
+  }
+  .title > span {
+	display: block;
+	overflow: hidden;
+  }
+
+  .title > span  >span {
+	display: block;
+  }
