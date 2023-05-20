@@ -1,0 +1,19 @@
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	bottom: 0;
+	overflow: hidden;
+	background: red;
+	z-index:1;
+  }
+  
+  .overlay {
+	 --clip:0%;
+	clip-path: circle(var(--clip));
+  }
+  .menu{
+	  background-color: black;
+  }
