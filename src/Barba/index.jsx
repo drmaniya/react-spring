@@ -49,7 +49,6 @@ function Home() {
 			<div data-barba="container" className="Home">
 
 				<div ref={(el) => (body = el)} className="Headd">
-					<Menu />
 
 					<div >Welcome to Home!!!</div>
 					<NavLink to="/about" className="button">About</NavLink>

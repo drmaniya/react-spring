@@ -8,22 +8,26 @@ import AnimateImage from "./Gsap/AnimateImage";
 import Product from "./Barba/Product";
 import Contact from "./Barba/Contact";
 import Service from "./Barba/Service";
+import Menu from "./Barba/Menu";
 
 
 function App() {
 	return (
+		<>
+			<Menu />
 
-		<Router>
-			<Routes>
-				<Route path="/" exact element={<Home />} />
-	 />
-				<Route path="/contact" exact element={<Contact />} />
-				<Route path="/product" exact element={<Product />} />
-				<Route path="/about" exact element={<About />} />
-				<Route path="/service" exact element={<Service />} />
-				<Route path="/Image" exact element={<AnimateImage />} />
-			</Routes>
-		</Router>
+			<Router>
+				<Routes>
+					<Route path="/" exact element={<Home />} />
+
+					<Route path="/contact" exact element={<Contact />} />
+					<Route path="/product" exact element={<Product />} />
+					<Route path="/about" exact element={<About />} />
+					<Route path="/service" exact element={<Service />} />
+					<Route path="/Image" exact element={<AnimateImage />} />
+				</Routes>
+			</Router>
+		</>
 
 	);
 }

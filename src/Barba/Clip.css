@@ -1,19 +1,139 @@
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	opacity: 0;
-	bottom: 0;
-	overflow: hidden;
-	background: red;
-	z-index:1;
-  }
-  
-  .overlay {
-	 --clip:0%;
-	clip-path: circle(var(--clip));
-  }
-  .menu{
-	  background-color: black;
-  }
+
+
+/* Header start */
+
+header{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+	z-index:2;
+}
+
+.header-row{
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo a{
+    font-size: 40px;
+	color:#fff;
+	text-decoration: none;
+}
+
+.menu-toggle{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger path{
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+}
+
+.fullpage-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+	z-index: 1;
+}
+.fullpage-menu-inner{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 100px 60px;
+}
+.menu-bg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.menu-bg span{
+    height: 33.334%;
+    width: 100%;
+    background: #e50914;
+    display: block;
+}
+
+nav{
+    position: relative;
+    z-index: 10;
+}
+
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    overflow: hidden;
+    transition: transform 300ms ease-in-out 0s;
+}
+nav li + li{
+    margin-top: 20px;
+}
+nav li a{
+    font-size: 100px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 1;
+}
+nav li:hover{
+    transform: translateX(50px);
+}
+.header-nav-footer{
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+}
+.social-links{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.social-links li{
+    font-size: 18px;
+    font-weight: 500;
+}
+.social-links li + li{
+    margin-left: 16px;
+}
+.social-links li:last-child{
+    margin-left: auto;
+}
+.social-links a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media screen and (max-width:767px) {
+    .header-row, .header-nav-footer{
+        padding: 30px;
+    }
+    .fullpage-menu-inner{
+        padding: 70px 30px;
+    }
+    nav li a{
+        font-size: 54px;
+    }
+    .social-links li{
+        font-size: 16px;
+    }
+}
