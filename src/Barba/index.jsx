@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { TweenMax, Power3, Power4 } from "gsap";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import Menu from "./Menu";
 
 function Home() {
 	let screen = useRef(null);

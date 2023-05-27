@@ -78,8 +78,9 @@ export default function Menu() {
 
 		tl.reverse();
 
-		element.addEventListener('click', function () {
-			console.log("click");
+		element.addEventListener('click', function (e) {
+			e.preventDefault();
+			console.log("prevent defailt click");
 			menuBar.reversed(!menuBar.reversed());
 			tl.reversed(!tl.reversed());
 		});

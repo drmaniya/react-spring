@@ -1,8 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { TweenMax, Power3, Power4 } from "gsap";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
+import "./contact.css";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import LocomotiveScroll from "locomotive-scroll";
 
 function Contact() {
 	let screen = useRef(null);
@@ -38,18 +40,142 @@ function Contact() {
 			});
 		}
 	});
+
+	useEffect(() => {
+		let ctx = gsap.context(() => {
+			gsap.registerPlugin(ScrollTrigger);
+			const btnEle = document.querySelector("#menuToggle");
+			const locoScroll = new LocomotiveScroll({
+				el: document.querySelector(".smooth-scroll"),
+				smooth: true,
+				lerp: 0.08,
+			});
+
+			locoScroll.on("scroll", ScrollTrigger.update);
+
+			ScrollTrigger.scrollerProxy(".smooth-scroll", {
+				scrollTop(value) {
+					return arguments.length
+						? locoScroll.scrollTo(value, 0, 0)
+						: locoScroll.scroll.instance.scroll.y;
+				},
+				getBoundingClientRect() {
+					return {
+						top: 0,
+						left: 0,
+						width: window.innerWidth,
+						height: window.innerHeight,
+					};
+				},
+				pinType: document.querySelector(".smooth-scroll").style.transform
+					? "transform"
+					: "fixed",
+			});
+
+			const vh = (coef) => window.innerHeight * (coef / 100);
+			console.log("vh", vh(100));
+			const heroScroller = gsap.timeline({
+				paused: true,
+				scrollTrigger: {
+					trigger: ".hero-header.h-1",
+					scroller: ".smooth-scroll",
+					pin: ".pin-wrapper",
+					start: "top 10%",
+					scrub: true,
+					end: `${vh(100)}`,
+				},
+			});
+
+			heroScroller
+				.to(
+					[".hero-header.h-1", ".hero-header.h-3"],
+					{
+						scale: 2,
+						y: vh(100),
+						xPercent: -100,
+					},
+					"heroScroll"
+				)
+				.to(
+					".hero-header.h-2",
+					{
+						scale: 2,
+						y: vh(100),
+						xPercent: 100,
+					},
+					"heroScroll"
+				)
+				.to(
+					"#heroImage",
+					{
+						scaleY: 2.5,
+
+					},
+					"heroScroll"
+				)
+				.to(
+					"#heroImage .image",
+					{
+						scaleX: 2.5,
+						xPercent: 50,
+					},
+					"heroScroll"
+				);
+
+			ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+			btnEle.addEventListener("click", () => {
+				console.log("menu loco");
+				locoScroll.update()
+			});
+			ScrollTrigger.refresh();
+		})
+		return () => ctx.revert();
+	})
 	return (
 		<React.Fragment>
 			<div className="load-container">
 				<div className="load-screen left" ref={(el) => (screen = el)}>
 				</div>
 			</div>
-			<div data-barba="container" className="Contact">
-				<div ref={(el) => (body = el)} className="Headd">
-					<div >Welcome to Contact!!!</div>
-					<NavLink to="/" className="button">Home</NavLink>
+
+			<div ref={(el) => (body = el)} className="Headd">
+				<div className="smooth-scroll">
+					<div className="hero-scroller">
+						<div className="section">
+							<div className="section-wrapper">
+								<div className="content">
+									<h1 className="hero-header h-1">the great</h1>
+									<h1 className="hero-header h-2">outdoors</h1>
+									<h1 className="hero-header h-3">volume</h1>
+								</div>
+								<div className="pin-wrapper">
+									<div className="image-wrapper" id="heroImage">
+										<img
+											className="image"
+											alt="txt"
+											src="https://images.unsplash.com/photo-1653919450772-489831a08403?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="section copy">
+						<div className="section-wrapper">
+							<div className="content">
+								<p>
+									It is a long established fact that a reader will be distracted by
+									the readable content of a page when looking at its layout. The
+									point of using Lorem Ipsum is that it has a more-or-less normal
+									distribution of letters, as opposed to using 'Content here,
+									content here', making it look like readable English.
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
+
 		</React.Fragment>
 	);
 }
