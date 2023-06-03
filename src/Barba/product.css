@@ -4,13 +4,19 @@
 
 .gallery {
   display:flex;	
-  outline:1px solid red;
 }
 
 .left {
 	width:50%;
+	margin-left: auto;
 }
-
+.details{
+	width:40vw;
+	margin-left: auto;
+	color:#fff;
+	font-size: 3rem;
+	font-weight: 900;
+}
 .detailsWrapper {
 	margin:auto;
 	width:80%;
@@ -18,7 +24,6 @@
 
 .details {
 	height:100vh;
-	outline:1px solid green;
 	display:flex;
 	flex-direction:column;
 	justify-content:center;
@@ -26,7 +31,6 @@
 
 
 .rightblock {
-	outline:1px solid purple;
 	width:50%;
 	height:100vh;
 	display:flex;
@@ -37,7 +41,6 @@
 .photos {
 	width:40vw;
 	height:40vw;
-	background:maroon;
 	position:relative;
 }
 
@@ -47,14 +50,7 @@
 	height:100%;
 }
 
-.red {
-	background: red;
-}
-
-.green {
-	background:green;
-}
-
-.blue {
-	background:blue;
+.photo img{
+	height: 100%;
+	width: 100%;
 }

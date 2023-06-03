@@ -5,7 +5,8 @@ body {
   overflow-x:hidden;
   box-sizing: border-box;
   background-color: #161616;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Cinzel', serif;
 }
 
 *,

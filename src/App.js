@@ -9,6 +9,7 @@ import Product from "./Barba/Product";
 import Contact from "./Barba/Contact";
 import Service from "./Barba/Service";
 import Menu from "./Barba/Menu";
+import Blog from "./Barba/Blog";
 
 
 function App() {
@@ -20,11 +21,12 @@ function App() {
 				<Routes>
 					<Route path="/" exact element={<Home />} />
 
-					<Route path="/contact" exact element={<Contact />} />
-					<Route path="/product" exact element={<Product />} />
-					<Route path="/about" exact element={<About />} />
-					<Route path="/service" exact element={<Service />} />
-					<Route path="/Image" exact element={<AnimateImage />} />
+					<Route path="/contact " element={<Contact />} />
+					<Route path="/product" element={<Product />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/service" element={<Service />} />
+					<Route path="/Image" element={<AnimateImage />} />
+					<Route path="/blog" element={<Blog />} />
 				</Routes>
 			</Router>
 		</>

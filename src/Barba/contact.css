@@ -16,7 +16,7 @@
   }
   
   .copy {
-	background: #d4cfc0;
+	background: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -34,8 +34,8 @@
   }
   
   h1 {
-	font-size: 180px;
-	font-weight: 700;
+	font-size: 160px;
+	font-weight: 900;
 	color:#fff;
 	line-height: 150px;
 	margin: 0px;
@@ -60,7 +60,7 @@
 	object-fit: cover;
   }
   
-  p {
+  .content p {
 	font-size: 4em;
 	line-height: 1.2em;
   }

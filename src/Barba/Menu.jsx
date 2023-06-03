@@ -3,7 +3,8 @@ import gsap from "gsap";
 import { Power2 } from "gsap/gsap-core";
 import "./Clip.css";
 import { useRef } from "react";
-
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 export default function Menu() {
 
@@ -89,50 +90,51 @@ export default function Menu() {
 	return (
 		<>
 			<header>
-				<div className="header-row">
-					<div className="brand-logo">
-						<a href="/">
-							Brand
-						</a>
-					</div>
-					<button ref={ref} className="menu-toggle" id="menuToggle">
+				<Box className="header-row">
+					<Box className="brand-logo">
+						<Box component="a" href="/">
+							AGENCY
+						</Box>
+					</Box>
+					<Button sx={{ background: "#000", "&:hover": { background: "#000" } }} ref={ref} className="menu-toggle" id="menuToggle">
 						<svg viewBox="0 0 12 10" className="hamburger" height="40px" width="40px">
 							<path d="M10,2 L2,2" className="bar-1"></path>
 							<path d="M2,5 L10,5" className="bar-2"></path>
 							<path d="M10,8 L2,8" className="bar-3"></path>
 
 						</svg>
-					</button>
-				</div>
+					</Button>
+				</Box>
 			</header>
 			<section className="fullpage-menu">
-				<div className="fullpage-menu-inner">
-					<div className="menu-bg">
+				<Box className="fullpage-menu-inner">
+					<Box className="menu-bg">
 						<span></span>
 						<span></span>
 						<span></span>
-					</div>
+					</Box>
 
 					<nav>
-						<ul className="main-menu">
-							<li><a href="/" >Home</a></li>
-							<li><a href="/about" >About</a></li>
-							<li><a href="/service" >Service</a></li>
-							<li><a href="/product" >Product</a></li>
-							<li><a href="/contact" >Contact</a></li>
-						</ul>
+						<Box component="ul" className="main-menu">
+							<Box component="li"><Box sx={{ fontWeight: 700 }} component="a" href="/" >Home</Box></Box>
+							<Box component="li"><Box sx={{ fontWeight: 700 }} component="a" href="/about" >About</Box></Box>
+							<Box component="li"><Box sx={{ fontWeight: 700 }} component="a" href="/service" >Service</Box></Box>
+							<Box component="li"><Box sx={{ fontWeight: 700 }} component="a" href="/product" >Product</Box></Box>
+							<Box component="li"><Box sx={{ fontWeight: 700 }} component="a" href="/contact" >Contact</Box></Box>
+							<Box component="li"><Box sx={{ fontWeight: 700 }} component="a" href="/blog" >Blogs</Box></Box>
+						</Box>
 					</nav>
 
-					{/* <div className="header-nav-footer">
+					{/* <Box className="header-nav-footer">
 						<ul className="social-links">
 							<li><a href="#">Facebook</a></li>
 							<li><a href="#">Instagram</a></li>
 							<li><a href="#">Twitter</a></li>
 							<li>&copy;2021</li>
 						</ul>
-					</div> */}
+					</Box> */}
 
-				</div>
+				</Box>
 			</section>
 		</>
 

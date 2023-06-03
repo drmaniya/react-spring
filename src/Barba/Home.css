@@ -1,27 +1,34 @@
 .App {
-	font-family: 'Poppins', sans-serif;
+	
 	text-align: center;
   }
   
   .Home, .Contact ,.Product, .About, .Service{
-	height: 100vh;
+	height:100vh;
 	background-color: #161616;
 	width: 100%;
 	position: absolute;
+
 	left: 50%;
 	transform: translate(-50%,0%);
   }
-   .Home > div , .Contact > div {
-	padding-top: 300px !important;
-	color: #ff7f82;
-	/* font-size: 7rem; */
+  .home-img{
+	  height:100%
   }
-  
-  .Contact > div {
-	color: #ffa260;
+.home-img img{
+	height:100%
+}
+.homeWrapper{
+	height:100vh;
+}
+  .aboutLink{
+	  font-weight: 600;
+	  color:#fff;
+	  font-size: 30px;
+	  text-decoration: none;
+	  margin-top: 2rem;
+	  display: flex;
   }
-
-  
   
   .button {
 	background: none;
@@ -32,10 +39,23 @@
 	text-decoration: none;
 	font-size: 30px;
 	color: #a972cb;
-	font-family: 'Roboto Mono', monospace;
 	text-transform: uppercase;
 	outline: none;
 	transition: all .3s;
+  }
+
+.hero-img-container::after{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #161616;
+	top: 0;
+	right: 0;
+  }
+  .homeWrapper{
+	  display: flex;
+	  align-items: center;
   }
   
   .button:hover,

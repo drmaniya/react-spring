@@ -52,10 +52,6 @@ function About() {
 				ease: Power4.easeInOut
 			}
 		}).delay(2);
-
-
-
-
 		return () => {
 			TweenMax.to(body, 1, {
 				css: {
@@ -70,37 +66,49 @@ function About() {
 			<div className="load-container">
 				<div className="load-screen top" ref={(el) => (screen = el)}></div>
 			</div>
-			{/* <div className="About"> */}
 			<div ref={(el) => (body = el)} className="Headd">
 				<div className="wrapper">
-
-
 					<div className="panel">
-						<img src="http://static.showit.co/800/XuvRR5ZKQ52a4R_B89WixA/59514/macbookpreview-8.jpg" alt="img-11" />
+						<div className="img-wrap">
+							<img
+								src="http://static.showit.co/800/XuvRR5ZKQ52a4R_B89WixA/59514/macbookpreview-8.jpg"
+								alt="img-11" />
+							<h2>SEO READY</h2>
+						</div>
 					</div>
-
-					<section className="panel black">
-						<img src="http://static.showit.co/800/R35-FqP9QASNbupmBSK7Iw/59514/macbookpreview-7.jpg" alt="img-12" />
-					</section>
-
-					<section className="panel ">
-						<div>
-							<img src="http://static.showit.co/800/KrKfX6KHTeu7iOs6wxOQMA/59514/macbookpreview-5.jpg" alt="img-13" />
+					<div className="panel black">
+						<div className="img-wrap">
+							<img
+								src="http://static.showit.co/800/R35-FqP9QASNbupmBSK7Iw/59514/macbookpreview-7.jpg"
+								alt="img-12" />
+							<h2>SMOOTH ANIMATION</h2>
 						</div>
-					</section>
-					<section className="panel black">
-						<div>
-							<img src="http://static.showit.co/800/peoh1XDRTVat5KqUv7P6GQ/59514/macbookpreview-3.jpg" alt="img-14" />
+					</div>
+					<div className="panel ">
+						<div className="img-wrap">
+							<img
+								src="http://static.showit.co/800/KrKfX6KHTeu7iOs6wxOQMA/59514/macbookpreview-5.jpg"
+								alt="img-13" />
+							<h2>MODERN LAYOUTS</h2>
 						</div>
-					</section>
-					<section className="panel">
-						<div>
-							<img src="http://static.showit.co/800/YyTYQlGLROOIJ5MqHIpKXQ/59514/macbookpreview-2.jpg" alt="img-15" />
+					</div>
+					<div className="panel black">
+						<div className="img-wrap">
+							<img
+								src="http://static.showit.co/800/peoh1XDRTVat5KqUv7P6GQ/59514/macbookpreview-3.jpg"
+								alt="img-14" />
+							<h2>SEO FRIENDLY</h2>
 						</div>
-					</section>
-
+					</div>
+					<div className="panel">
+						<div className="img-wrap">
+							<img
+								src="http://static.showit.co/800/YyTYQlGLROOIJ5MqHIpKXQ/59514/macbookpreview-2.jpg"
+								alt="img-15" />
+							<h2>EASY TO USE</h2>
+						</div>
+					</div>
 				</div>
-				{/* </div> */}
 			</div>
 		</React.Fragment>
 	);

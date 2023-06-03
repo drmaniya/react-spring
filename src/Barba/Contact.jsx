@@ -144,16 +144,16 @@ function Contact() {
 						<div className="section">
 							<div className="section-wrapper">
 								<div className="content">
-									<h1 className="hero-header h-1">the great</h1>
-									<h1 className="hero-header h-2">outdoors</h1>
-									<h1 className="hero-header h-3">volume</h1>
+									<h1 className="hero-header h-1">CONNECT</h1>
+									<h1 className="hero-header h-2">FOR MORE</h1>
+									<h1 className="hero-header h-3">DETAILS</h1>
 								</div>
 								<div className="pin-wrapper">
 									<div className="image-wrapper" id="heroImage">
 										<img
 											className="image"
 											alt="txt"
-											src="https://images.unsplash.com/photo-1653919450772-489831a08403?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80"
+											src="https://burst.shopifycdn.com/photos/contact-us-image.jpg?width=1200&format=pjpg&exif=1&iptc=1"
 										/>
 									</div>
 								</div>

@@ -31,8 +31,6 @@ function Product() {
 		return () => ctx.revert();
 	})
 	useEffect(() => {
-
-
 		var tl = gsap.timeline();
 		tl.to(screen, {
 			duration: 1.2,
@@ -61,8 +59,6 @@ function Product() {
 				}
 			});
 		}
-
-
 	});
 	return (
 		<React.Fragment>
@@ -73,25 +69,33 @@ function Product() {
 			<div ref={(el) => (body = el)} className="Headd">
 				<div className="gallery product-smooth-scroll">
 					<div className="left">
-
 						<div className="details">
+							BRAND PRODUCT
 						</div>
-
 						<div className="details">
+							PRODUCT DETAILS
 						</div>
-
 						<div className="details">
+							DESIGN AGENCY
 						</div>
-
-
 					</div>
-
 					<div className="rightblock">
 						<div className="photos">
-							<div className="photo red"><img src="http://static.showit.co/800/M0IzUCMvQCqlJn1YtNlikw/59514/pexels-yan-5793641-1.jpg" alt="img-1" /></div>
-							<div className="photo green"><img src="http://static.showit.co/800/137NFxuzSxeyjlons2WEzA/59514/pexels-yan-5793643.jpg" alt="img-2" /></div>
-							<div className="photo blue"><img src="http://static.showit.co/800/3kOLYaOCS1SMieN6Y88Fqg/59514/mukuko-studio-mu88mlefcou-unsplash.jpg" alt="img-3" /></div>
-
+							<div className="photo">
+								<img
+									src="http://static.showit.co/800/M0IzUCMvQCqlJn1YtNlikw/59514/pexels-yan-5793641-1.jpg"
+									alt="img-1" />
+							</div>
+							<div className="photo">
+								<img
+									src="http://static.showit.co/800/137NFxuzSxeyjlons2WEzA/59514/pexels-yan-5793643.jpg"
+									alt="img-2" />
+							</div>
+							<div className="photo">
+								<img
+									src="http://static.showit.co/800/3kOLYaOCS1SMieN6Y88Fqg/59514/mukuko-studio-mu88mlefcou-unsplash.jpg"
+									alt="img-3" />
+							</div>
 						</div>
 					</div>
 				</div>
