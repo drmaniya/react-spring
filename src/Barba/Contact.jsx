@@ -6,7 +6,7 @@ import "./contact.css";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
 
-function Contact() {
+const Contact = () => {
 	let screen = useRef(null);
 	let body = useRef(null);
 	useEffect(() => {
@@ -132,9 +132,9 @@ function Contact() {
 		return () => ctx.revert();
 	})
 	return (
-		<React.Fragment>
+		<>
 			<div className="load-container">
-				<div className="load-screen left" ref={(el) => (screen = el)}>
+				<div className="load-screen left" >
 				</div>
 			</div>
 
@@ -176,7 +176,7 @@ function Contact() {
 				</div>
 			</div>
 
-		</React.Fragment>
+		</>
 	);
 }
 

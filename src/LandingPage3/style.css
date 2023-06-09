@@ -1,0 +1,58 @@
+
+
+  
+  .box-container {
+	position: absolute;
+	top: 275px;
+	right: 0;
+	z-index: 11;
+	left: 0;
+	text-align: center;
+	user-select: none;
+  }
+  
+  .tile {
+	width: 200px;
+	height: 200px;
+	margin: 4px;
+	cursor: pointer;  
+	z-index: 11;
+	display: inline-block;
+  }
+  
+  .container {
+	visibility: hidden;
+  }
+  
+  .page {
+	cursor: pointer;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	position: fixed;
+  }
+  .imgClass{
+	  width: 0%;
+	  opacity: 0;
+	  height:100%;
+	  left:0;
+  }
+  .box-1 {
+	background: #F4DB33;
+  }
+  
+  .box-2 {
+	background: #972FF8;
+  }
+  
+  .box-3 {
+	background: #7DD6FE;
+  }
+  
+  .box-4 {
+	background: #DC3C84;
+  }
+  
+
